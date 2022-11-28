@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
-    private Button btnLogin;
+    private Button btnLogin,btnSignUp;
     private String username, password;
     private EditText etUsername, etPassword;
     @Override
@@ -31,6 +31,19 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnSignUp = findViewById(R.id.btnSignUp);
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
     }
     //login input field validation
         private boolean loginValidation() {

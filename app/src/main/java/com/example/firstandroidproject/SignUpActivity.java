@@ -1,9 +1,11 @@
 package com.example.firstandroidproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,8 +43,16 @@ public class SignUpActivity extends AppCompatActivity {
                 }
             }
         });
+        setAppBar();
     }
+    private void setAppBar(){
 
+        if(getSupportActionBar()!= null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+        }
+
+    }
     private boolean signupValidation() {
         username = etUsername.getText().toString();
         fullname = etFullName.getText().toString();
@@ -66,5 +76,15 @@ public class SignUpActivity extends AppCompatActivity {
             return false;
         }
         return !confirmPassword.isEmpty();
+    }
+
+    @Override
+//back button lea kam garna ko lagi back ko id saddhai yei nai hunxa
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == android.R.id.home){
+            onBackPressed();
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
