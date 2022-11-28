@@ -1,0 +1,2 @@
+# AndroidRita
+# AndroidProject
