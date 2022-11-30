@@ -81,10 +81,9 @@ public class SignUpActivity extends AppCompatActivity {
     @Override
 //back button lea kam garna ko lagi back ko id saddhai yei nai hunxa
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == android.R.id.home){
-            onBackPressed();
-
+        if(item.getItemId() == android.R.id.home){//id liyako
+            onBackPressed();//event call
         }
-        return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(item);//default generated
     }
 }
