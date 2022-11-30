@@ -1,10 +1,12 @@
 package com.example.firstandroidproject.api;
 
+import com.example.firstandroidproject.response.FoodResponse;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 
-public class ApiInterface {
+public interface ApiInterface {
 //    get ki post ho hya bhitra lekhni
-    @GET('api/food')
+    @GET("api/food")
     Call<FoodResponse> getFood();
 }
