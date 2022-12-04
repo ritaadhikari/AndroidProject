@@ -10,7 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.firstandroidproject.R;
+import com.example.firstandroidproject.api.Api;
+import com.example.firstandroidproject.model.Food;
 import com.example.firstandroidproject.model.Product;
 
 import java.util.ArrayList;
@@ -20,10 +23,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     //creating variables
     //context:
     private Context context;
-    private ArrayList<Product> productArrayList;
+    private ArrayList<Food> productArrayList;
 
     //creating constructor
-    public ProductAdapter(Context context,ArrayList<Product>productArrayList){
+    public ProductAdapter(Context context,ArrayList<Food>productArrayList){
         this.context = context;  //assigning value of parameter(context) to the variable created by us
         this.productArrayList=productArrayList;  //json chai product array list ma hunxa
     }
@@ -38,9 +41,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
         //array list ma item tanne based on position and passing it
-          Product item = productArrayList.get(position);  //getting every values of array in item
+          Food item = productArrayList.get(position);  //getting every values of array in item
           holder.tvName.setText(item.getName()); //setting item name to tvName
           holder.tvPrice.setText(String.valueOf(item.getPrice())); //converting string to integer value
+          Glide.with(context)
+                  .load(Api.BASE_URL+item.getUrl())
+                  .placeholder(R.drawable.flower)
+                  .into(holder.ivProduct);
+
+
     }
 
     @Override
