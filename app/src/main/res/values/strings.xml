@@ -7,4 +7,6 @@
     <string name="txtProduct">Product</string>
     <string name="txtNoAccount">Dont have an account?</string>
     <string name="txtSignUp">signup</string>
+    <string name="txtDeleteAll">DeleteAll</string>
+    <string name="txtAddRecord">Add</string>
 </resources>
