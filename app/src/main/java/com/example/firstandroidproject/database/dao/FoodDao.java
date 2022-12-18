@@ -15,6 +15,7 @@ public interface FoodDao {
     @Insert
     void insertItem(FoodEntity foodEntity);
 
+
     @Delete
     void deleteItem(FoodEntity foodEntity);
 
@@ -22,4 +23,7 @@ public interface FoodDao {
     void updateItem(FoodEntity foodEntity);
     @Query("SELECT* FROM FoodEntity")
     List<FoodEntity> getAllItems();
+
+    @Query("DELETE FROM FoodEntity")
+    void deleteAll();
 }

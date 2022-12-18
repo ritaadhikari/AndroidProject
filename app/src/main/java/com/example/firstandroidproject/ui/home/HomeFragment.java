@@ -1,5 +1,6 @@
 package com.example.firstandroidproject.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.firstandroidproject.DatabaseActivity;
 import com.example.firstandroidproject.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -24,8 +26,14 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        binding.btnAllFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =  new Intent(getActivity(), DatabaseActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return root;
     }
 

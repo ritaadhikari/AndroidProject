@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.firstandroidproject.app.App;
 import com.example.firstandroidproject.database.dao.FoodDao;
@@ -35,6 +36,8 @@ public class AddRecordActivity extends AppCompatActivity {
                     food.setPrice(String.valueOf(Double.parseDouble(binding.etPrice.getText().toString())));
 
                     App.foodDao.insertItem(food);
+                    Toast.makeText(AddRecordActivity.this, "RecordAdded",Toast.LENGTH_SHORT).show();
+                    finish();
 
             }
         });

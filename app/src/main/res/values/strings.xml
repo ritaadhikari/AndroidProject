@@ -9,4 +9,5 @@
     <string name="txtSignUp">signup</string>
     <string name="txtDeleteAll">DeleteAll</string>
     <string name="txtAddRecord">Add</string>
+    <string name="txtAllFood">All Food</string>
 </resources>
