@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "957630619785",
+    "project_id": "rita-computer-project",
+    "storage_bucket": "rita-computer-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957630619785:android:5fba77257853a857e2a658",
+        "android_client_info": {
+          "package_name": "com.example.firstandroidproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957630619785-t8j3u0u9nld2hf4a51udjk7l3f2aiabm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJbJVxWUhqKfNbgh_nZOUSgG3hLc4mjqs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957630619785-t8j3u0u9nld2hf4a51udjk7l3f2aiabm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

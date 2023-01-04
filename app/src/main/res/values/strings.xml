@@ -10,4 +10,6 @@
     <string name="txtDeleteAll">DeleteAll</string>
     <string name="txtAddRecord">Add</string>
     <string name="txtAllFood">All Food</string>
+    <string name="msg_token_fmt">FCM Token</string>
+    <string name="default_notification_channel_id">FCM_default_channel</string>
 </resources>
